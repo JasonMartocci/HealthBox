@@ -1,0 +1,503 @@
+body{
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background-image: url("../images/pageBg.png");
+}
+.flickrImages{
+    height: 117px;
+    width: 117px;
+    padding: 1px;
+}
+.feedgrabbr_widget{
+    margin-left: -7px;
+    margin-top: -39px;
+}
+input:required:invalid, input:focus:invalid {
+  /* insert your own styles for invalid form input */
+  border: 1px solid #FF0000;
+}
+.jumbotron{
+    height: 375px;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+div.clouds {
+    position:absolute;
+    z-index:1;
+    margin-top: -48px;
+    width:100%;
+    height: 350px;
+    overflow: hidden;
+}
+div.clouds video, div.clouds object, div.clouds embed {
+    /*width: 100%;*/
+    width: 2000px;
+    height: auto;
+    min-width: 720px;
+    margin: 0 auto;  
+}
+.copyrite{
+    width: 50%;
+    float: left;
+}
+.footerNav{
+    width: 50%;
+    float: right;
+}
+#error{
+    display: none;
+}
+.container{
+    background-color: #ffffff;
+}
+.p{
+    font-size: 20px;
+}
+.searchCopy{
+    text-align: center;
+    color: #ffffff;
+    font-size: 20px;
+    margin-top: 60px;
+}
+.headerLogo{
+    margin-top: -50px;
+    height: 50px;
+    background-color: #ffffff;
+}
+.healthBoxLogo{
+    margin-top: 7px;
+}
+.col-md-12{
+    background-color: #ffffff;
+}
+.row{
+    background-color: #ffffff;
+}
+.searchBox{
+    background-color: #ffffff;
+}
+.searchResults{
+    margin-top: 10px
+}
+.navbar{
+    background-color: white;
+}
+.speech {border: 1px solid #DDD; width: 300px; padding: 0; margin: 0}
+.speech input {border: 0; width: 240px; display: inline-block; height: 30px;}
+.speech img {float: right; width: 40px }
+
+/* =========Start Chat styles=========*/
+#nameInput{
+    width:30%;
+}
+#messageInput{
+    width:50%;
+}
+.chatBoard{
+    position: relative;
+    background-color: #ffffff;
+    float: right;
+    z-index:10;
+}
+.chatMsg{
+    width: 250px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 1px solid #ACB2C1;
+    margin: 12px 0 0 0;
+    padding: 5px;
+}
+#messagesDiv{
+    overflow: scroll;
+    height: 430px;
+    border: 1px solid #ACB2C1;
+    padding: 5px;
+    z-index: 10;
+    background-color: #EDEEF1;
+}
+.hideSearch {
+    background-color: #3379B5;
+    background-image: -webkit-gradient(linear, left left bottom, color-stop(0%, #3379B5), color-stop(100%, #cbe0f5));
+    background-image: -webkit-linear-gradient(#3379B5, #265A89);
+    background-image: -moz-linear-gradient(#3379B5, #265A89);
+    background-image: -ms-linear-gradient(#3379B5, #265A89);
+    background-image: -o-linear-gradient(#3379B5, #265A89);
+    background-image: linear-gradient(#3379B5, #265A89);
+    border: 1px solid #245580;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    -webkit-box-shadow: inset 0 1px 0 0 white;
+    -moz-box-shadow: inset 0 1px 0 0 white;
+    box-shadow: inset 0 1px 0 0 white;
+    color: #ffffff;
+    margin-bottom: 10px;
+    padding: 6px 0 7px 0;
+    text-align: center;
+    float:right;
+    width: 80px;
+    cursor: pointer;
+}
+.showSearch {
+    background-color: #3379B5;
+    background-image: -webkit-gradient(linear, left left bottom, color-stop(0%, #3379B5), color-stop(100%, #cbe0f5));
+    background-image: -webkit-linear-gradient(#3379B5, #265A89);
+    background-image: -moz-linear-gradient(#3379B5, #265A89);
+    background-image: -ms-linear-gradient(#3379B5, #265A89);
+    background-image: -o-linear-gradient(#3379B5, #265A89);
+    background-image: linear-gradient(#3379B5, #265A89);
+    border: 1px solid #245580;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    -webkit-box-shadow: inset 0 1px 0 0 white;
+    -moz-box-shadow: inset 0 1px 0 0 white;
+    box-shadow: inset 0 1px 0 0 white;
+    color: #ffffff;
+    margin-bottom: 10px;
+    padding: 6px 0 7px 0;
+    text-align: center;
+    float:right;
+    width: 80px;
+    display: none;
+    cursor: pointer;
+}
+/* =========Stop Chat styles=========*/
+
+/* =========Start Search box styles=========*/
+.dropdown.dropdown-lg .dropdown-menu {
+    margin-top: -1px;
+    padding: 6px 20px;
+}
+.input-group-btn .btn-group {
+    display: flex !important;
+}
+.btn-group .btn {
+    border-radius: 0;
+    margin-left: -1px;
+}
+.btn-group .btn:last-child {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+.btn-group .form-horizontal .btn[type="submit"] {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.form-horizontal .form-group {
+    margin-left: 0;
+    margin-right: 0;
+}
+.form-group .form-control:last-child {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+.dictation{
+    float:right;
+    background-color: #ffffff;
+    height: 34px;
+    z-index: 20;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+    #adv-search {
+        width: 500px;
+        margin: 0 auto;
+    }
+    .dropdown.dropdown-lg {
+        position: static !important;
+    }
+    .dropdown.dropdown-lg .dropdown-menu {
+        min-width: 500px;
+    }
+}
+/* =========Stop Search box styles=========*/
+
+/* =========Start Yelp API styles========= */
+.restaurantBox{
+    float: left;
+}
+.imageDisplay{
+    width: 190px;
+    height: 190px;
+    padding: 10px;
+}
+.yelpLabel{
+    text-overflow: ellipsis; /* will make [...] at the end */
+    white-space: nowrap; /* paragraph to one line */
+    overflow: hidden; /* older browsers */
+    width: 160px;
+    margin-left: 10px;
+    font-size: 16px; 
+}
+.yelpPhone{
+    margin-left: 10px;
+    margin-top: -12px;
+    float: left;
+    font-size: 15px;
+}
+.yelpRating{
+    width: 80px;
+    margin-top: -10px;
+    float: left;
+    margin-left: 10px;
+}
+
+/* =========End Yelp API styles=========*/
+
+/* =========Start Yummly API styles=========*/
+.recipeSearch{
+    width: 100%;
+    float: left;
+}
+.recipeSearchResults{
+    width: 100%;
+}
+.recipeContainer{
+    width: 190px;
+    float: left;
+}
+.recipeSearchResultsImage{
+    width: 190px;
+    height: 190px;
+    padding: 10px;
+}
+.recipeLabel{
+    text-overflow: ellipsis; /* will make [...] at the end */
+    white-space: nowrap; /* paragraph to one line */
+    overflow:hidden; /* older browsers */
+    width: 160px;
+    margin-left: 10px;
+    color: black;
+    font-size: 16px;
+}
+.recipeSource{
+    width: 160px;
+    margin-left: 10px;
+    color: black;
+    font-size: 15px;
+}
+/* =========End Yummly API styles=========*/
+
+/* =========Start Google places with geolocation API styles=========*/
+#gmap_canvas {
+    height: 350px;
+    position: relative;
+    width: 100%;
+}
+.actions {
+    position: fixed;
+    background-color: #FFFFFF;
+    top: 10px;
+    padding: 10px;
+    left: 10px;
+    z-index: 10;
+    border: 1px solid #DBD8CF;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+.actions label {
+    display: block;
+    margin: 2px 0 5px 10px;
+    text-align: left;
+}
+.actions input, .actions select {
+    width: 85%;
+}
+.labels{
+    background-color: #d7e5f5;
+    background-image: -webkit-gradient(linear, left left bottom, color-stop(0%, green), color-stop(100%, #cbe0f5));
+    background-image: -webkit-linear-gradient(#d7e5f5, #cbe0f5);
+    background-image: -moz-linear-gradient(#d7e5f5, #cbe0f5);
+    background-image: -ms-linear-gradient(#d7e5f5, #cbe0f5);
+    background-image: -o-linear-gradient(#d7e5f5, #cbe0f5);
+    background-image: linear-gradient(#d7e5f5, #cbe0f5);
+    border-top: 1px solid #abbbcc;
+    border-left: 1px solid #a7b6c7;
+    border-bottom: 1px solid #a1afbf;
+    border-right: 1px solid #a7b6c7;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0 1px 0 0 white;
+    -moz-box-shadow: inset 0 1px 0 0 white;
+    box-shadow: inset 0 1px 0 0 white;
+    color: #1a3e66;
+    font: normal 11px;
+    line-height: 1;
+    margin-bottom: 5px;
+    padding: 6px 0 7px 0;
+    text-align: center;
+    text-shadow: 0 1px 1px #fff;
+    width: 150px;
+}
+.button {
+    background-color: #d7e5f5;
+    background-image: -webkit-gradient(linear, left left bottom, color-stop(0%, #d7e5f5), color-stop(100%, #cbe0f5));
+    background-image: -webkit-linear-gradient(#d7e5f5, #cbe0f5);
+    background-image: -moz-linear-gradient(#d7e5f5, #cbe0f5);
+    background-image: -ms-linear-gradient(#d7e5f5, #cbe0f5);
+    background-image: -o-linear-gradient(#d7e5f5, #cbe0f5);
+    background-image: linear-gradient(#d7e5f5, #cbe0f5);
+    border-top: 1px solid #abbbcc;
+    border-left: 1px solid #a7b6c7;
+    border-bottom: 1px solid #a1afbf;
+    border-right: 1px solid #a7b6c7;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0 1px 0 0 white;
+    -moz-box-shadow: inset 0 1px 0 0 white;
+    box-shadow: inset 0 1px 0 0 white;
+    color: #1a3e66;
+    font: normal 11px "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+    line-height: 1;
+    margin-bottom: 5px;
+    padding: 6px 0 7px 0;
+    text-align: center;
+    text-shadow: 0 1px 1px #fff;
+    width: 150px;
+}
+.button:hover {
+    background-color: #ccd9e8;
+    background-image: -webkit-gradient(linear, left left bottom, color-stop(0%, #ccd9e8), color-stop(100%, #c1d4e8));
+    background-image: -webkit-linear-gradient(#ccd9e8, #c1d4e8);
+    background-image: -moz-linear-gradient(#ccd9e8, #c1d4e8);
+    background-image: -ms-linear-gradient(#ccd9e8, #c1d4e8);
+    background-image: -o-linear-gradient(#ccd9e8, #c1d4e8);
+    background-image: linear-gradient(#ccd9e8, #c1d4e8);
+    border-top: 1px solid #a1afbf;
+    border-left: 1px solid #9caaba;
+    border-bottom: 1px solid #96a3b3;
+    border-right: 1px solid #9caaba;
+    -webkit-box-shadow: inset 0 1px 0 0 #f2f2f2;
+    -moz-box-shadow: inset 0 1px 0 0 #f2f2f2;
+    box-shadow: inset 0 1px 0 0 #f2f2f2;
+    color: #163659;
+    cursor: pointer;
+}
+.button:active {
+    border: 1px solid #8c98a7;
+    -webkit-box-shadow: inset 0 0 4px 2px #abbccf, 0 0 1px 0 #eeeeee;
+    -moz-box-shadow: inset 0 0 4px 2px #abbccf, 0 0 1px 0 #eeeeee;
+    box-shadow: inset 0 0 4px 2px #abbccf, 0 0 1px 0 #eeeeee;
+}
+#infowindowPhoto{
+    float: left;
+    margin: 0 0 10px 10px;
+}
+#infowindowData{
+    float: right;
+    margin: 0 0 10px 10px;
+    line-height: 20px;
+}
+/*=========Stop Google places with geolocation API styles=========*/
+
+
+/*=========Start mobile web styles=========*/
+
+/* Start of Mobile 640 width css styling */
+@media only screen and (max-width: 400px) {
+    .recipeSearchResults{
+        width: 300px;
+    }
+    .recipeSearchResultsImage{
+        width: 275px;
+        height: 275px;
+    }
+    .imageDisplay{
+        width: 275px;
+        height: 275px;
+    }
+    .searchCopy{
+        text-align: center;
+        color: #ffffff;
+        font-size: 15px;
+    }
+    .jumbotron{
+        height: 130px;
+        margin: 0 auto;
+        background-repeat: no-repeat;
+        background-size:cover;
+    }
+    .googleMaps{
+        width: 200px;
+    }
+    .staticHomeImages{
+        width: 275px;
+    }
+    #gmap_canvas {
+        position: relative;
+        width: 275px;
+    }
+    .container{
+        width: 300px;
+        position: relative;
+        margin: 0 auto;
+    }
+    .labels{
+        background-color: #d7e5f5;
+        background-image: -webkit-gradient(linear, left left bottom, color-stop(0%, green), color-stop(100%, #cbe0f5));
+        background-image: -webkit-linear-gradient(#d7e5f5, #cbe0f5);
+        background-image: -moz-linear-gradient(#d7e5f5, #cbe0f5);
+        background-image: -ms-linear-gradient(#d7e5f5, #cbe0f5);
+        background-image: -o-linear-gradient(#d7e5f5, #cbe0f5);
+        background-image: linear-gradient(#d7e5f5, #cbe0f5);
+        border-top: 1px solid #abbbcc;
+        border-left: 1px solid #a7b6c7;
+        border-bottom: 1px solid #a1afbf;
+        border-right: 1px solid #a7b6c7;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        -webkit-box-shadow: inset 0 1px 0 0 white;
+        -moz-box-shadow: inset 0 1px 0 0 white;
+        box-shadow: inset 0 1px 0 0 white;
+        color: #1a3e66;
+        font: normal 11px;
+        line-height: 1;
+        margin-bottom: 5px;
+        padding: 6px 0 7px 0;
+        text-align: center;
+        text-shadow: 0 1px 1px #fff;
+        width: 90px;
+    }
+    .button {
+        background-color: #d7e5f5;
+        background-image: -webkit-gradient(linear, left left bottom, color-stop(0%, #d7e5f5), color-stop(100%, #cbe0f5));
+        background-image: -webkit-linear-gradient(#d7e5f5, #cbe0f5);
+        background-image: -moz-linear-gradient(#d7e5f5, #cbe0f5);
+        background-image: -ms-linear-gradient(#d7e5f5, #cbe0f5);
+        background-image: -o-linear-gradient(#d7e5f5, #cbe0f5);
+        background-image: linear-gradient(#d7e5f5, #cbe0f5);
+        border-top: 1px solid #abbbcc;
+        border-left: 1px solid #a7b6c7;
+        border-bottom: 1px solid #a1afbf;
+        border-right: 1px solid #a7b6c7;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        -webkit-box-shadow: inset 0 1px 0 0 white;
+        -moz-box-shadow: inset 0 1px 0 0 white;
+        box-shadow: inset 0 1px 0 0 white;
+        color: #1a3e66;
+        font: normal 11px "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+        line-height: 1;
+        margin-bottom: 5px;
+        padding: 6px 0 7px 0;
+        text-align: center;
+        text-shadow: 0 1px 1px #fff;
+        width: 90px;
+    }
+    #infowindowPhoto{
+        margin: 0 0 0 0;
+        display: none;
+    }
+    #infowindowData{
+        margin: 0 0 10px 10px;
+        height: 100px;
+    }
+}

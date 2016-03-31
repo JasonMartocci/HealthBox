@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>HealthBox</title>
+    <link href="assets/css/reset.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" media="screen" />
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+    <!-- Master theme -->
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/javascript/chat.js"></script>
+    <script type="text/javascript" src="assets/javascript/jquery.fancybox.js?v=2.1.5"></script> 
+    <script type="text/javascript" src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+
+    <script src="http://code.responsivevoice.org/responsivevoice.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <div class="container">
+      <div class="row">
+          <div class="col-md-12 headerLogo"><a href="index.html"><img src="assets/images/logo.jpg" class="healthBoxLogo" alt="HealthBox"></a></div>
+      </div>
+  </div>
+  <div class="chatBoard">
+    <div id='messagesDiv'></div>
+      <input type='text' id='nameInput' placeholder='Name'>
+      <input type='text' id='messageInput' placeholder='Type a message'>
+      <input id="dictate-text" width="100" onclick="responsiveVoice.speak($('#messageInput').val(),$('UK English Female').val());" type="button" value="Play" />
+  </div>
+</body>
+</html>

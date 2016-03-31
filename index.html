@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>HealthBox</title>
+    <link href="assets/css/reset.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" media="screen" />
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+    <!-- Master theme -->
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script type="text/javascript" src="http://oauth.googlecode.com/svn/code/javascript/sha1.js"></script>
+    <script type="text/javascript" src="http://oauth.googlecode.com/svn/code/javascript/oauth.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQjuF3467Iv198d9El48lxJNh9yRcJQLA&libraries=places"></script>
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
+    <script type="text/javascript" src="assets/javascript/jquery.fancybox.js?v=2.1.5"></script> 
+    <script type="text/javascript" src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+    
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 headerLogo"><a href="index.html"><img src="assets/images/logo.jpg" class="healthBoxLogo" alt="HealthBox"></a></div>
+        </div>
+    </div>
+    <!-- <div class="jumbotron">
+      <div class="clouds">
+          <video width="600" height="200" autoplay="autoplay" loop="loop" preload>
+            <source src="http://www.eclarify.com/videos/background.mp4" type="video/mp4" >
+              <source src="http://www.eclarify.com/videos/background.ogg" type="http://leongaban.com/video/ogg" >
+              <source src="http://www.eclarify.com/videos/background.webm" type="video/webm" >
+              <object data="http://www.eclarify.com/videos/background.mp4" width="1920" height="1080">
+                  <param name="wmode" value="transparent">
+                  <param name="autoplay" value="true" >
+                  <param name="loop" value="true" >
+                  <embed src="http://www.eclarify.com/videos/background.swf" width="1920" height="1080" wmode="transparent" >
+              </object>
+          </video>
+      </div>
+    </div> -->
+    <div class="jumbotron">
+        <div id="error"></div>
+        <p class="searchCopy"><span class="searchCopy">Find the food you love. Discover new places.<br>Connect with your favorite wellness location.</span></p>
+        <div class="input-group" id="adv-search">
+          <input type="text" name="q" class="form-control" id="formValueId" placeholder="Recipe Search"> 
+            <div class="input-group-btn">
+                <div class="btn-group" role="group">
+                  <img id="startDictation" class="dictation" src="assets/images/mic.png" />
+                    <div class="dropdown dropdown-lg">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Yelp | Flickr</button>
+                        <div class="dropdown-menu dropdown-menu-right" role="menu">
+                            <form class="form-horizontal">
+                              <div class="form-group">
+                                <label for="gmap_where">Location</label>
+                                <input class="form-control" id="gmap_where" type="text" name="gmap_where" value="07054" required/>
+                              </div>
+                              <div class="form-group">
+                                <label for="gmap_type">Destination</label>
+                                <select class="form-control" id="gmap_type">
+                                    <option value="bakery">Bakery</option>
+                                    <option value="bar">Bar</option>
+                                    <option value="beauty_salon">Beauty Salon</option>
+                                    <option value="bicycle_store">Bicycle Store</option>
+                                    <option value="cafe">Cafe</option>
+                                    <option value="convenience_store">Convenience Store</option>
+                                    <option value="dentist">Dentist</option>
+                                    <option value="doctor">Doctor</option>
+                                    <option value="grocery_or_supermarket">Grocery</option>
+                                    <option value="gym" selected>Gym</option>
+                                    <option value="hair_care">Hair Care</option>
+                                    <option value="liquor_store">Liquor Store</option>
+                                    <option value="meal_delivery">Meal Delivery</option>
+                                    <option value="meal_takeaway">Meal Takeout</option>
+                                    <option value="night_club">Night Club</option>
+                                    <option value="park">Park</option>
+                                    <option value="pharmacy">Pharmacy</option>
+                                    <option value="restaurant">Restaurant</option>
+                                    <option value="shopping_mall">Shopping Mall</option>
+                                    <option value="spa">Spa</option>
+                                    <option value="store">Stores</option>
+                                </select>
+                              </div>
+                              <div class="form-group">
+                                    <label for="gmap_radius">Distance</label>
+                                    <select class="form-control" id="gmap_radius">
+                                        <option value="305">1000 ft</option>
+                                        <option value="805" selected>1/2 mile</option>
+                                        <option value="1610">1 mile</option>
+                                        <option value="3220">2 miles</option>
+                                    </select>
+                              </div>
+                                <input type="hidden" id="lat" name="lat" value="40.7191114" />
+                                <input type="hidden" id="lng" name="lng" value="-74.0328205" />
+                              <button type="submit" class="btn btn-primary" id="searchYelp" onclick="findAddress(); findPlaces(); restaurantFinder(); return false;"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                            </form>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-primary" id="findRecipies"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+
+      <hr>
+
+      <div class="row">
+        <div class="col-md-12 searchResults">
+          <img src="assets/images/spa.jpg" class="staticHomeImages" alt="Relaxing Spa">
+          <img src="assets/images/sushi.jpg" class="staticHomeImages" alt="Sushi">
+          <img src="assets/images/club.jpg" class="staticHomeImages" alt="DJ Dancing">
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Local View</h2>
+          <p><div id="gmap_canvas"></div></p>
+        </div>
+        <div class="col-md-4">
+          <h2>Flickr Fitness</h2>
+          <p><div id="flickr-health"></div></p>
+        </div>
+        <div class="col-md-4">
+          <h2>Health News</h2>
+          <div class="feedgrabbr_widget" id="fgid_b67509cbc38fff1b64c8a59cf"></div>
+          <script> if (typeof(fg_widgets)==="undefined") fg_widgets = new Array();fg_widgets.push("fgid_b67509cbc38fff1b64c8a59cf");</script>
+          <script src="http://www.feedgrabbr.com/widget/fgwidget.js"></script>
+       </div>
+      </div>
+
+      <hr>
+
+      <footer>
+        <span class="copyright">&copy; 2016 HealthBox.</span>
+        <div class="footerNav">
+          <div id="chat" class="hideSearch">Chat</div>
+        </div>
+      </footer>
+    </div>
+</body>
+</html>
